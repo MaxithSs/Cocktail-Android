@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CocktailAndroidApp</string>
+
+    <string name="title_activity_list_cocktail_1">list_cocktail_1</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

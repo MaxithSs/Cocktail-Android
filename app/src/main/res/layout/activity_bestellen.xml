@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bestellen_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cocktail Auswahl"
+            android:textAllCaps="true"
+            android:textColor="#fff"
+            android:fontFamily="@font/bebasneue"
+            android:textAlignment="center"
+            android:textSize="25dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/cocktail_1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/sunset_cocktail"
+            android:onClick="onClickBtnCocktail1" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_button"/>
+
+        <Button
+            android:id="@+id/cocktail_2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/summerbeach_cocktail"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/cocktail_3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/summer_dream_cocktail"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_button"/>
+
+        <Button
+            android:id="@+id/cocktail_4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/bananaboat_cocktail"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/dialog_layout">
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#FFFF"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainText"
+        android:textAlignment="center"
+        android:text="Cocktail wird zubereitet"
+        android:fontFamily="@font/bebasneue"
+        android:textSize="40dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="55dp"
+        android:text=""
+        android:textAlignment="center"
+        android:fontFamily="@font/bebasneue"
+        android:id="@+id/clientsID"/>
+</LinearLayout>

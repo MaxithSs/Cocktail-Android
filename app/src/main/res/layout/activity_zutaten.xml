@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/zutaten_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:orientation="vertical"
+    tools:context=".Zutaten">
+
+    <TextView
+        android:id="@+id/hilfe_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_weight="0"
+        android:fontFamily="@font/bebasneue"
+        android:text="Zutaten"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="40dp"
+        android:scrollbars="vertical"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/bebasneue"
+        android:textSize="33dp"
+        android:text="Sunset"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="33dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/bebasneue"
+        android:id="@+id/SunsetZutate"
+        android:textColor="#fff"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/bebasneue"
+        android:textSize="33dp"
+        android:text="Summer Beach"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="33dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/bebasneue"
+        android:id="@+id/SummerBeachZutate"
+        android:textColor="#fff"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/bebasneue"
+        android:textSize="33dp"
+        android:text="Banana Boat"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="33dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/bebasneue"
+        android:id="@+id/bananaBoatZutate"
+        android:textColor="#fff"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/bebasneue"
+        android:textSize="33dp"
+        android:text="Summer Dream"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="33dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/bebasneue"
+        android:id="@+id/SummerDreamZutate"
+        android:textColor="#fff"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"/>
+
+</LinearLayout>

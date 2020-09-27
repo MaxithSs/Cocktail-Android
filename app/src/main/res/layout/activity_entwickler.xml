@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/entwickler_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:gravity="center"
+    tools:context=".Entwickler"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:fontFamily="@font/bebasneue"
+        android:text="Entwickler: SIA 2018/2019"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="35dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:text="Developer: Maxim Weinrauch"
+        android:fontFamily="@font/bebasneue"
+        android:textSize="27dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:src="@drawable/maxim"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>
