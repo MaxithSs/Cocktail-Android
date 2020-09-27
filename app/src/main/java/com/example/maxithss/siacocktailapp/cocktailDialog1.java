@@ -1,6 +1,6 @@
 package com.example.maxithss.siacocktailapp;
 
-import android.annotation.SuppressLint;
+
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Bundle;
@@ -17,18 +17,14 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.Random;
 
-//@SuppressWarnings("HardcodedText")
-//@SuppressLint("HardcodedText")
 public class cocktailDialog1 extends DialogFragment {
 
-    private static boolean isConnected = false;
-    private static final String SERVER_IP = "localhost";
-    private static final int SERVER_PORT = 5555;
     String ID;
     private TextView clientsID;
     private TextView mainText;
+
+    private Connection connection = new Connection();
 
 
     //cocktail_click == new DialogWindow
@@ -43,34 +39,10 @@ public class cocktailDialog1 extends DialogFragment {
     }
 
     private class ConnectionThread implements Runnable {
-        Socket clientSocket = null;
+        Socket socket = null;
         @Override
         public void run() {
-            try {
-                clientSocket = new Socket(SERVER_IP,SERVER_PORT);
-                isConnected = true;
-                //Sending message to server
-                PrintWriter printWriter = new PrintWriter
-                        (new BufferedWriter
-                                (new OutputStreamWriter
-                                        (clientSocket.getOutputStream())),true);
-                printWriter.println("1");
-                //Getting message from server
-                InputStream inputStream = clientSocket.getInputStream();
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                ID = bufferedReader.readLine();
-            }catch (IOException e) {
-                e.printStackTrace();
-            }catch (Exception e) {
-                e.printStackTrace();
-            }finally {
-                try {
-                    clientSocket.close();
-                }catch (Exception e) {
-                    e.getMessage();
-                }
-            }
+            connection.setConnection(socket, 1);
         }
     }
     @Override
@@ -84,11 +56,11 @@ public class cocktailDialog1 extends DialogFragment {
             e.printStackTrace();
         }
 
-        if (ID != null) {
+        if (connection.getId() != null) {
             mainText = getDialog().findViewById(R.id.mainText);
             clientsID = getDialog().findViewById(R.id.clientsID);
             mainText.setText("Cocktail wird zubereitet");
-            clientsID.setText("ID: " + ID);
+            clientsID.setText("ID: " + connection.getId());
         } else {
             mainText = getDialog().findViewById(R.id.mainText);
             clientsID = getDialog().findViewById(R.id.clientsID);

@@ -6,33 +6,18 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.Random;
-
 @SuppressWarnings("HardcodedText")
 @SuppressLint("HardcodedText")
 public class cocktailDialog2 extends DialogFragment {
 
-    private static boolean isConnected = false;
-    private static final String SERVER_IP = "192.168.8.112"; //192.168.8.112
-    private static final int SERVER_PORT = 49566;
-    String ID;
-    private TextView clientsID;
-    private TextView mainText;
+    protected Connection connection = new Connection();
+    protected TextView clientsID;
+    protected TextView mainText;
 
-    Random random = new Random();
-    int id = random.nextInt(999);
 
     @NonNull
     @Override
@@ -45,34 +30,11 @@ public class cocktailDialog2 extends DialogFragment {
 
     }
 
-    private class ConnectionThread implements Runnable{
-        Socket clientSocket = null;
+    private class ConnectionThread implements Runnable {
+        Socket socket = null;
         @Override
         public void run() {
-            try {
-                clientSocket = new Socket(SERVER_IP,SERVER_PORT);
-                isConnected = true;
-                //Sending message to server
-                PrintWriter printWriter = new PrintWriter
-                        (new BufferedWriter
-                                (new OutputStreamWriter
-                                        (clientSocket.getOutputStream())),true);
-                printWriter.println("2");
-                //Getting message from server
-                InputStream inputStream = clientSocket.getInputStream();
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                ID = bufferedReader.readLine();
-                Log.i("TAG_ID", ID);
-            }catch (IOException e) {
-                e.printStackTrace();
-            }finally {
-                try {
-                    clientSocket.close();
-                }catch (Exception e) {
-                    e.getMessage();
-                }
-            }
+            connection.setConnection(socket, 2);
         }
     }
     @Override
@@ -85,11 +47,10 @@ public class cocktailDialog2 extends DialogFragment {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         mainText = getDialog().findViewById(R.id.mainText);
         mainText.setText("Cocktail wird zubereitet");
 
         clientsID = getDialog().findViewById(R.id.clientsID);
-        clientsID.setText("ID: " + ID);
+        clientsID.setText("ID: " + connection.getId());
     }
 }
