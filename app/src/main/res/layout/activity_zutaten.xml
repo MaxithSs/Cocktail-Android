@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_list"
     android:orientation="vertical"
-    tools:context=".Zutaten">
+    tools:context=".Ingredients">
 
     <TextView
         android:id="@+id/hilfe_text"

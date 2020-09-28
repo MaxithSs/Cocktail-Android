@@ -14,12 +14,12 @@ public class Connection {
 
     protected String SERVER = "localhost";
     protected int PORT = 5555;
+    protected String id;
+
 
     public String getId() {
         return id;
     }
-
-    protected String id;
 
     protected String setConnection(Socket socket, int cocktailNumber) {
         id = null;

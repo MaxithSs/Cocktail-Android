@@ -1,24 +1,29 @@
 package com.example.maxithss.siacocktailapp;
 
 import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class Zutaten extends AppCompatActivity {
+public class Ingredients extends AppCompatActivity {
 
-    private TextView sunset;
-    private TextView summerBeach;
-    private TextView bananaBoat;
-    private TextView summerDream;
-    private String zutaten[] = {
+
+    protected TextView sunset;
+    protected TextView summerBeach;
+    protected TextView bananaBoat;
+    protected TextView summerDream;
+    //protected TextView[] textViews = new TextView[] {sunset, summerBeach, summerDream, bananaBoat};
+    protected String ingredients[] = {
             "Osaft • Ananas • Kirsch",
             "Osaft • Kirsch",
             "Osaft • Banane • Kirsch" ,
             "Osaft • Banane • Ananas"};
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,10 +42,16 @@ public class Zutaten extends AppCompatActivity {
         bananaBoat = findViewById(R.id.bananaBoatZutate);
         summerDream = findViewById(R.id.SummerDreamZutate);
 
-        String sunsetZutate = zutaten[0];
-        String summerBeachZutate = zutaten[1];
-        String bananaBoatZutate = zutaten[2];
-        String summerDreamZutate = zutaten[3];
+//        for (TextView textView : textViews) {
+//            for (String ingredient : ingredients) {
+//                textView.setText(ingredient);
+//            }
+//        }
+
+        String sunsetZutate = ingredients[0];
+        String summerBeachZutate = ingredients[1];
+        String bananaBoatZutate = ingredients[2];
+        String summerDreamZutate = ingredients[3];
         sunset.setText(sunsetZutate);
         summerBeach.setText(summerBeachZutate);
         bananaBoat.setText(bananaBoatZutate);

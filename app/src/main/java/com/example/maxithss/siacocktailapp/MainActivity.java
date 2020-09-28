@@ -3,17 +3,16 @@ package com.example.maxithss.siacocktailapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class MainActivity extends Activity {
-    private Button btn_bestellen;
-    private Button btn_hilfe;
-    private Button btn_zutaten;
-    private Button btn_entwickler;
+    protected Button btn_bestellen;
+    protected Button btn_hilfe;
+    protected Button btn_zutaten;
+    protected Button btn_entwickler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +45,7 @@ public class MainActivity extends Activity {
             View.OnClickListener onClickListener_bestellen = new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent bestellen_activity = new Intent(MainActivity.this, Bestellen.class);
+                    Intent bestellen_activity = new Intent(MainActivity.this, Order.class);
                     startActivity(bestellen_activity);
                 }
             };
@@ -66,7 +65,7 @@ public class MainActivity extends Activity {
             View.OnClickListener onClickListener_zutaten = new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent zutaten_activity = new Intent(MainActivity.this,Zutaten.class);
+                    Intent zutaten_activity = new Intent(MainActivity.this, Ingredients.class);
                     startActivity(zutaten_activity);
 
                 }

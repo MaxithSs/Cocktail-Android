@@ -21,13 +21,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.maxithss.siacocktailapp.Bestellen"
+            android:name="com.example.maxithss.siacocktailapp.Order"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.example.maxithss.siacocktailapp.Hilfe"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.maxithss.siacocktailapp.Zutaten"
+            android:name="com.example.maxithss.siacocktailapp.Ingredients"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.example.maxithss.siacocktailapp.Entwickler"

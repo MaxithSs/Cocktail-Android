@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-public class Bestellen extends AppCompatActivity {
+public class Order extends AppCompatActivity {
 
     private Button cocktail_sunset;
     private Button cocktail_summerbeach;
